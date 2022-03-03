@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XamarinFormsDemo.Views.NewItemPage"
+		Title="New Item">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid ColumnSpacing="20" Padding="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Date" FontSize="Medium" Grid.Row="0" Grid.Column="0" />
+            <Entry Text="{Binding Item.Date}" FontSize="Small" Margin="0" Grid.Row="1" Grid.Column="0" />
+            <Label Text="High" FontSize="Medium" Grid.Row="2" Grid.Column="0" />
+            <Editor Text="{Binding Item.High}" FontSize="Small" Margin="0" Grid.Row="3" Grid.Column="0" />
+            <Label Text="Low" FontSize="Medium" Grid.Row="4" Grid.Column="0" />
+            <Editor Text="{Binding Item.Low}" FontSize="Small" Margin="0" Grid.Row="5" Grid.Column="0" />
+            <Label Text="Open" FontSize="Medium" Grid.Row="6" Grid.Column="0" />
+            <Editor Text="{Binding Item.Open}" FontSize="Small" Margin="0" Grid.Row="7" Grid.Column="0" />
+            <Label Text="Close" FontSize="Medium" Grid.Row="8" Grid.Column="0" />
+            <Editor Text="{Binding Item.Close}" FontSize="Small" Margin="0" Grid.Row="9" Grid.Column="0" />
+            <Label Text="Volume" FontSize="Medium" Grid.Row="10" Grid.Column="0" />
+            <Editor Text="{Binding Item.Volume}" FontSize="Small" Margin="0" Grid.Row="11" Grid.Column="0" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

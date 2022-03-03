@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Adapters\**" />
+    <Compile Remove="Data\**" />
+    <Compile Remove="Files\**" />
+    <EmbeddedResource Remove="Adapters\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="Files\**" />
+    <None Remove="Adapters\**" />
+    <None Remove="Data\**" />
+    <None Remove="Files\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Item.cs" />
+    <Compile Remove="Models\OrderDetail.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.XamarinForms.Charts" Version="21.2.6" />
+    <PackageReference Include="DevExpress.Xpo" Version="21.2.6" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.0-preview.1.22076.6" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.8039" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\ChartPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
