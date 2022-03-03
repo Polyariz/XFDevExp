@@ -73,24 +73,18 @@ Install-Package Microsoft.Data.Sqlite
 
     ```cs
     using DevExpress.Xpo;
-	using System;
 
-	namespace XamarinFormsDemo.Models
-	{ 
-		//POCO XPO entity
-		[Persistent]
-		public class StockPrice
-		{
-			[Key]
-			public string Id { get; set; }  
-			public DateTime Date { get; set; } 
-			public double High { get; set; }
-			public double Low { get; set; }
-			public double Open { get; set; }
-			public double Close { get; set; }
-			public double Volume { get; set; }
-		}
-	}
+    namespace XamarinFormsDemo.Models {
+        [Persistent]
+        public class Item {
+            [Key]
+            public string Id { get; set; }
+            [Size(256)]
+            public string Text { get; set; }
+            [Size(SizeAttribute.Unlimited)]
+            public string Description { get; set; }
+        }
+    }
     ```
 
 
