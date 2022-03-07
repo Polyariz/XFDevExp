@@ -132,9 +132,6 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.XamarinForms.Charts">
-      <Version>21.2.6</Version>
-    </PackageReference>
     <PackageReference Include="DevExpress.Xpo">
       <Version>21.2.6-pre-22053</Version>
     </PackageReference>

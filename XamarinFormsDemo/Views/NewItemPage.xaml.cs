@@ -15,12 +15,12 @@ namespace XamarinFormsDemo.Views {
             DateTime randomDate = DateTime.Today.AddDays(-gen.Next(range));
 
              
-       double rDouble = gen.NextDouble() * 100; //for doubles
+            double rDouble = gen.NextDouble() * 100; //for doubles
 
             var open = gen.Next(1200, 1300);
 
             Item = new StockPrice {
-                Id = Guid.NewGuid().ToString(),
+               Id = Guid.NewGuid().ToString(),
                Date = randomDate,
                Open = open,
                High = open + 10,

@@ -8,7 +8,8 @@ namespace XamarinFormsDemo.Models
     public class StockPrice
     {
         [Key]
-        public string Id { get; set; }  
+        public string Id { get; set; }
+        [DbType("smalldatetime")]
         public DateTime Date { get; set; } 
         public double High { get; set; }
         public double Low { get; set; }
